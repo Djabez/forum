@@ -1,0 +1,28 @@
+{
+  "groups": [
+    {
+      "name": "fanli.jwt",
+      "type": "com.danli.util.JwtUtils",
+      "sourceType": "com.danli.util.JwtUtils"
+    }
+  ],
+  "properties": [
+    {
+      "name": "fanli.jwt.expire",
+      "type": "java.lang.Long",
+      "sourceType": "com.danli.util.JwtUtils",
+      "defaultValue": 0
+    },
+    {
+      "name": "fanli.jwt.header",
+      "type": "java.lang.String",
+      "sourceType": "com.danli.util.JwtUtils"
+    },
+    {
+      "name": "fanli.jwt.secret",
+      "type": "java.lang.String",
+      "sourceType": "com.danli.util.JwtUtils"
+    }
+  ],
+  "hints": []
+}
