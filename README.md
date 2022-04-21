@@ -1,2 +1,2 @@
-# forum
-MingYu forum
+# Forum
+MingYu Forum 
