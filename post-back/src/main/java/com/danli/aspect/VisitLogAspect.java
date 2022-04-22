@@ -80,10 +80,10 @@ public class VisitLogAspect {
         Object result = joinPoint.proceed();
         int times = (int) (System.currentTimeMillis() - currentTime.get());
         currentTime.remove();
-        //Verify the visitor ID
-        String identification = checkIdentification(request);
-          //Asynchronously save to database
-        saveVisitLog(joinPoint, visitLogger, request, result, times, identification);
+//         //Verify the visitor ID
+//         String identification = checkIdentification(request);
+//           //Asynchronously save to database
+//         saveVisitLog(joinPoint, visitLogger, request, result, times, identification);
 
         return result;
     }
@@ -226,7 +226,7 @@ public class VisitLogAspect {
             }
             else{
                 //Update last time and PV
-                updateVistor(identification);
+//                 updateVistor(identification);
             }
         }
         return identification;
@@ -238,11 +238,11 @@ public class VisitLogAspect {
 
     @Async
     void updateVistor(String identification) {
-        //Update last access time and PV
-        Visitor visitor = visitorService.getVisitorByUuid(identification);
-        visitor.setPv(visitor.getPv()+1);
-        visitor.setLastTime(LocalDateTime.now());
-        visitorService.saveOrUpdate(visitor);
+//         //Update last access time and PV
+//         Visitor visitor = visitorService.getVisitorByUuid(identification);
+//         visitor.setPv(visitor.getPv()+1);
+//         visitor.setLastTime(LocalDateTime.now());
+//         visitorService.saveOrUpdate(visitor);
     }
 
 
